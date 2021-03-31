@@ -1,4 +1,5 @@
 /*
+* SANAR WOY LAGI GW FIX
 * Tambahin nama author lah
 * Author nya Radya, Farid, and Nazwa
 * Tambahin ya zhayank
