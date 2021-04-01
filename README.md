@@ -8,21 +8,15 @@
 
 
 <p align="center">
-<a href="https://github.com/NazwaS"><img title="Author" src="https://img.shields.io/badge/AUTHOR-NAZWAS-orange?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/SanzzGanzs"><img title="Author" src="https://img.shields.io/badge/AUTHOR-NAZWAS-orange?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center">
-<a href="https://github.com/NazwaS/termux-whatsapp-bot/followers"><img title="Followers" src="https://img.shields.io/github/followers/NazwaS?style=flat-square"></a>
-<a href="https://github.com/NazwaS/termux-whatsapp-bot/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/NazwaS/termux-whatsapp-bot?style=flat-square"></a>
-<a href="https://github.com/NazwaS/termux-whatsapp-bot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/NazwaS/termux-whatsapp-bot?style=flat-square"></a>
-<a href="https://github.com/NazwaS/termux-whatsapp-bot/watchers"><img title="watchers" src="https://img.shields.io/github/watchers/NazwaS/termux-whatsapp-bot?style=flat-square"></a>
+<a href="https://github.com/SanzzGanzs/termux-whatsapp-bot/followers"><img title="Followers" src="https://img.shields.io/github/followers/SanzzGanzs?style=flat-square"></a>
+<a href="https://github.com/SanzzGanzs/termux-whatsapp-bot/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/NazwaS/termux-whatsapp-bot?style=flat-square"></a>
+<a href="https://github.com/SanzzGanzs/termux-whatsapp-bot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/SanzzGanzs/termux-whatsapp-bot?style=flat-square"></a>
+<a href="https://github.com/SanzzGanzs/termux-whatsapp-bot/watchers"><img title="watchers" src="https://img.shields.io/github/watchers/SanzzGanzs/termux-whatsapp-bot?style=flat-square"></a>
 </p>
 
-
-<summary>🍙 Help me!</summary>
-
-* [Saweria](https://saweria.co/nazwas)
-* [Trakteer](https://trakteer.id/NazwaS)
-</details>
 
 ## Tools
 
