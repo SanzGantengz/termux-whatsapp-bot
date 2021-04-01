@@ -1,13 +1,10 @@
 /*
-* SANAR WOY LAGI GW FIX
+* SABAR WOY LAGI GW FIX
 * Tambahin nama author lah
 * Author nya Radya, Farid, and Nazwa
 * Tambahin ya zhayank
 * Jan numpang nama doank
 * Baca readme nya biar gk tanya tanya
-
-- What's New?
-* Added New Features
 */
 
 const {
