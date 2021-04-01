@@ -71,7 +71,7 @@ Follow The Steps Below!
 > npm start
 ```
 ## jika error' silahkan download file di bawah dan extrak pindahin di file bot mu
-Get File on [this site](https://www.mediafire.com/download/etk3xp7q1zt4g9r) 
+Get File on [Uwuw Uwuw'an :v](https://www.mediafire.com/download/etk3xp7q1zt4g9r) 
 ## Features
 
 | unique features | YES
