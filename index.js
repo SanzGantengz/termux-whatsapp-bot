@@ -182,7 +182,7 @@ async function starts() {
 		console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan the qr code above'))
 	})
 
-	fs.existsSync('./BarBar.json') && client.loadAuthInfo('./BarBar.json')
+	fs.existsSync('./sanz.json') && client.loadAuthInfo('./sanz.json')
 	client.on('connecting', () => {
 		start('2', 'Connecting...')
 	})
@@ -190,7 +190,7 @@ async function starts() {
 		success('2', 'Connected')
 	})
 	await client.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
+        fs.writeFileSync('./sanz.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
 
 	client.on('group-participants-update', async (anu) => {
 		if (!welkom.includes(anu.jid)) return
@@ -268,7 +268,7 @@ async function starts() {
 					ownerB: '[❗] Perintah ini hanya bisa di gunakan oleh owner bot! ❌',
 					admin: '[❗] Perintah ini hanya bisa di gunakan oleh admin group! ❌',
 					Badmin: '[❗] Perintah ini hanya bisa di gunakan ketika bot menjadi admin! ❌',
-                                        daftarB: `──「 DAFTAR 」──\nHalo kak !\nKamu belum Terdaftar didalam database, \n\nCommand : ${prefix}daftar nama|umur\nContoh : ${prefix}daftar Ryz|17`,
+                                        daftarB: `──「 DAFTAR 」──\nHalo kak !\nKamu belum Terdaftar didalam database, \n\nCommand : ${prefix}daftar nama|umur\nContoh : ${prefix}daftar Sanz|17`,
 				}
 			}
     			const apakah = ['Ya','Tidak']
@@ -293,7 +293,7 @@ async function starts() {
 			const isOwner = ownerNumber.includes(sender)
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
-                        const NomerOwner = '6282135250846@s.whatsapp.net'
+                        const NomerOwner = '6282135250846@s.whatsapp.net' //ganti no lu
                         /******ApiKey Input******/
                         const BarBarKey = 'YOUR_APIKEY'
                         /******End of ApiKey Input******/
@@ -561,11 +561,11 @@ async function starts() {
 					if (args.length < 1) return reply('Urlnya mana um?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					m = body.slice(7)
-					asu = await fetchJson(`http://lolhuman.herokuapp.com/api/ytaudio?apikey=1847144d66d409be5918d8ab&url=${m}`)
+					asu = await fetchJson(`http://lolhuman.herokuapp.com/api/ytaudio?apikey=API_LU&url=${m}`)
 					anu = await fetchJson(`https://videfikri.com/api/ytmp3/?url=${m}`)
 				
 					
-					teks = `  *SANZ-BOT*  
+					teks = `  *SANZ-BOT*   //ganti nama bot lu
  *Judul :* ${asu.result.title}
  *Id :* ${asu.result.id}
  *Durasi :* ${asu.result.duration}
@@ -587,7 +587,7 @@ async function starts() {
 					reply(mess.wait)
 					buffer = await getBuffer(anu.thumb)
 				 	ini_link = args[0]
-                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/ytvideo?apikey=1847144d66d409be5918d8ab&url=${ini_link}`)
+                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/ytvideo?apikey=API_LU&url=${ini_link}`)
                     get_result = get_result.result
                     txt = `Title : ${get_result.title}\n`
                     txt += `Uploader : ${get_result.uploader}\n`
@@ -1282,7 +1282,7 @@ async function starts() {
                       break
                          case 'play':
                 reply(mess.wait)
-                anu = await fetchJson(`https://api.vhtear.com/ytmp3?query=${body.slice(6)}&apikey=${VhtearKey}`)
+                anu = await fetchJson(`https://api.vhtear.com/ytmp3?query=${body.slice(6)}&apikey=api_lu`)
                if (!isUser) return reply(mess.only.daftarB)
                if (anu.error) return reply(anu.error)
                  infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${anu.result.title}\nDurasi : ${anu.result.duration}\nUkuran : ${anu.result.size}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM YA SAYANG*`
@@ -1829,7 +1829,7 @@ case 'ttp':
 
                     if (args.length == 0) return reply(`Usage: ${prefix + command} query\nExample: ${prefix + command} Kata`)
                     txt = args.join(" ")
-                    buffer = await getBuffer(`https://lolhuman.herokuapp.com/api/ttp3?apikey=1847144d66d409be5918d8ab&text=${txt}`)
+                    buffer = await getBuffer(`https://lolhuman.herokuapp.com/api/ttp3?apikey=API_LU&text=${txt}`)
                     client.sendMessage(from, buffer, sticker, { quoted: mek })
                     await limitAdd(sender) 
                     break
@@ -1843,11 +1843,7 @@ case 'attp':
 				await limitAdd(sender) 
 				break
 
-case '>':
-if (!isOwner) return reply('Kamu siapa?')
-var konsol = args.join(' ')
-reply(util.format(eval(`;(async () => { ${konsol} })()`)))
-break
+
 
 
                                 case 'clearall':
@@ -1946,37 +1942,7 @@ case 'toptt':
 						})
 						break
 
-case 'todoc':
 
-			if (isLimit(sender)) return reply(limitend(pushname2))
-			kntl = body.slice(6)
-					reply(mess.wait)
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await client.downloadAndSaveMediaMessage(encmedia)
-					ran = getRandom('.mp3')
-					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
-						fs.unlinkSync(media)
-						if (err) return reply('Gagal mengkonversi audio ke ptt')
-						topt = fs.readFileSync(ran)
-						client.sendMessage(from, topt, document, {mimetype: 'audio/mp4', filename : `${kntl}.mp3`, quoted: mek, audio:true})
-						})
-						break
-
-case 'audname':
-
-			if (isLimit(sender)) return reply(limitend(pushname2))
-			p = body.slice(7)
-					reply(mess.wait)
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await client.downloadAndSaveMediaMessage(encmedia)
-					ran = getRandom('.mp3')
-					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
-						fs.unlinkSync(media)
-						if (err) return reply('Gagal mengkonversi audio ke ptt')
-						topt = fs.readFileSync(ran)
-						client.sendMessage(from, topt, audio, {mimetype: 'audio/mp4', filename: `${p}.mp3`, quoted: mek})
-						})
-						break
 
 case 'googletext':
 				 
@@ -2236,365 +2202,201 @@ fs.unlinkSync(rano)
 
 
 } else {
-	
   reply('Gunakan foto!')
 }
 break
 case 'glass':
-
-    
-
 var imgbb = require('imgbb-uploader')
-
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-
   ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
-
   reply('[] Loading')
-
   owgi = await client.downloadAndSaveMediaMessage(ger)
-
   anu = await imgbb("3288743671daa60ae804b059e13b37d5", owgi)
-
   teks = `${anu.display_url}`
-
   ranp = getRandom('.gif')
-
   rano = getRandom('.webp')
-
   anu1 = `https://some-random-api.ml/canvas/glass?avatar=${teks}`
-
   exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-
 fs.unlinkSync(ranp)
-
 if (err) return reply(mess.error.stick)
-
 nobg = fs.readFileSync(rano)
-
 client.sendMessage(from, nobg, sticker, {
-
   quoted: mek
 })
 fs.unlinkSync(rano)
   })
-
-
-} else {
-	
+} else {	
   reply('Gunakan foto!')
 }
 break
         case 'greyscale':
-
-    
-
 var imgbb = require('imgbb-uploader')
-
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-
   ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
-
   reply('[] Loading')
-
   owgi = await client.downloadAndSaveMediaMessage(ger)
-
   anu = await imgbb("3288743671daa60ae804b059e13b37d5", owgi)
-
   teks = `${anu.display_url}`
-
   ranp = getRandom('.gif')
-
   rano = getRandom('.webp')
-
   anu1 = `https://some-random-api.ml/canvas/greyscale?avatar=${teks}`
-
-  exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-
+  exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => 
 fs.unlinkSync(ranp)
-
 if (err) return reply(mess.error.stick)
-
 nobg = fs.readFileSync(rano)
-
 client.sendMessage(from, nobg, sticker, {
-
   quoted: mek
 })
 fs.unlinkSync(rano)
   })
-
-
 } else {
-	
   reply('Gunakan foto!')
 }
 break
 case 'invertgreyscale':
-
-    
-
 var imgbb = require('imgbb-uploader')
-
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-
   ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
-
   reply('[] Loading')
-
   owgi = await client.downloadAndSaveMediaMessage(ger)
-
   anu = await imgbb("3288743671daa60ae804b059e13b37d5", owgi)
-
   teks = `${anu.display_url}`
-
   ranp = getRandom('.gif')
-
   rano = getRandom('.webp')
-
   anu1 = `https://some-random-api.ml/canvas/invertgreyscale?avatar=${teks}`
-
   exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-
 fs.unlinkSync(ranp)
-
 if (err) return reply(mess.error.stick)
-
 nobg = fs.readFileSync(rano)
-
 client.sendMessage(from, nobg, sticker, {
-
   quoted: mek
 })
 fs.unlinkSync(rano)
   })
-
-
 } else {
 	
   reply('Gunakan foto!')
 }
 break
 case 'brightness':
-
-    
-
 var imgbb = require('imgbb-uploader')
-
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-
   ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
-
   reply('[] Loading')
-
   owgi = await client.downloadAndSaveMediaMessage(ger)
-
   anu = await imgbb("3288743671daa60ae804b059e13b37d5", owgi)
-
   teks = `${anu.display_url}`
-
   ranp = getRandom('.gif')
-
   rano = getRandom('.webp')
-
   anu1 = `https://some-random-api.ml/canvas/brightness?avatar=${teks}`
-
   exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-
 fs.unlinkSync(ranp)
-
 if (err) return reply(mess.error.stick)
-
 nobg = fs.readFileSync(rano)
-
 client.sendMessage(from, nobg, sticker, {
-
   quoted: mek
 })
 fs.unlinkSync(rano)
   })
-
-
 } else {
-	
   reply('Gunakan foto!')
 }
 break
 case 'merah':
 case 'read':
 case 'red':
-    
-
 var imgbb = require('imgbb-uploader')
-
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-
   ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
-
   reply('[] Loading')
-
   owgi = await client.downloadAndSaveMediaMessage(ger)
-
   anu = await imgbb("3288743671daa60ae804b059e13b37d5", owgi)
-
   teks = `${anu.display_url}`
-
   ranp = getRandom('.gif')
-
   rano = getRandom('.webp')
-
   anu1 = `https://some-random-api.ml/canvas/red?avatar=${teks}`
-
   exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-
 fs.unlinkSync(ranp)
-
 if (err) return reply(mess.error.stick)
-
 nobg = fs.readFileSync(rano)
-
 client.sendMessage(from, nobg, sticker, {
-
   quoted: mek
 })
 fs.unlinkSync(rano)
   })
-
-
-} else {
-	
+} else {	
   reply('Gunakan foto!')
 }
 break
 case 'green':
-    
-
 var imgbb = require('imgbb-uploader')
-
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-
   ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
-
   reply('[] Loading')
-
   owgi = await client.downloadAndSaveMediaMessage(ger)
-
   anu = await imgbb("3288743671daa60ae804b059e13b37d5", owgi)
-
   teks = `${anu.display_url}`
-
   ranp = getRandom('.gif')
-
   rano = getRandom('.webp')
-
   anu1 = `https://some-random-api.ml/canvas/green?avatar=${teks}`
-
   exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-
 fs.unlinkSync(ranp)
-
 if (err) return reply(mess.error.stick)
-
 nobg = fs.readFileSync(rano)
-
 client.sendMessage(from, nobg, sticker, {
-
   quoted: mek
 })
 fs.unlinkSync(rano)
   })
-
-
 } else {
-	
   reply('Gunakan foto!')
 }
 break
 case 'blue':
-    
-
 var imgbb = require('imgbb-uploader')
-
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-
   ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
-
   reply('[] Loading')
-
   owgi = await client.downloadAndSaveMediaMessage(ger)
-
   anu = await imgbb("3288743671daa60ae804b059e13b37d5", owgi)
-
   teks = `${anu.display_url}`
-
   ranp = getRandom('.gif')
-
   rano = getRandom('.webp')
-
   anu1 = `https://some-random-api.ml/canvas/blue?avatar=${teks}`
-
   exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-
 fs.unlinkSync(ranp)
-
 if (err) return reply(mess.error.stick)
-
 nobg = fs.readFileSync(rano)
-
 client.sendMessage(from, nobg, sticker, {
-
   quoted: mek
 })
 fs.unlinkSync(rano)
   })
-
-
-} else {
-	
+} else {	
   reply('Gunakan foto!')
 }
 break
 case 'color':
-    
-
 var imgbb = require('imgbb-uploader')
-
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-
   ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
-
   reply('[] Loading')
-
   owgi = await client.downloadAndSaveMediaMessage(ger)
-
   anu = await imgbb("3288743671daa60ae804b059e13b37d5", owgi)
-
   teks = `${anu.display_url}`
-
   ranp = getRandom('.gif')
-
   rano = getRandom('.webp')
-
   anu1 = `https://some-random-api.ml/canvas/color?avatar=${teks}`
-
   exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-
 fs.unlinkSync(ranp)
-
 if (err) return reply(mess.error.stick)
-
 nobg = fs.readFileSync(rano)
-
 client.sendMessage(from, nobg, sticker, {
-
   quoted: mek
 })
 fs.unlinkSync(rano)
   })
-
-
 } else {
-	
   reply('Gunakan foto!')
 }
 break
