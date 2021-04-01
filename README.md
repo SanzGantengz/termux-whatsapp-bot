@@ -71,8 +71,7 @@ Follow The Steps Below!
 > npm start
 ```
 ## jika error' silahkan download file di bawah dan extrak pindahin di file bot mu
-> https://www.mediafire.com/download/etk3xp7q1zt4g9r
-> Jika masih ada kebingungan Chan gw
+Get File on [this site](https://www.mediafire.com/download/etk3xp7q1zt4g9r) 
 ## Features
 
 | unique features | YES
@@ -255,5 +254,7 @@ Follow The Steps Below!
 | Afk|✅|
 
 ---
+
+## jika kurang paham silahkan chat gw
 
 <img src="https://raw.githubusercontent.com/NazwaS/NazwaS/main/img/tenor.gif">
