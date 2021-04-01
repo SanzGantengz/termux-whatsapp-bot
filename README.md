@@ -8,7 +8,7 @@
 
 
 <p align="center">
-<a href="https://github.com/SanzzGanzs"><img title="Author" src="https://img.shields.io/badge/AUTHOR-NAZWAS-orange?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/SanzzGanzs"><img title="Author" src="https://img.shields.io/badge/AUTHOR-SanzzGanzs-orange?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center">
 <a href="https://github.com/SanzzGanzs/termux-whatsapp-bot/followers"><img title="Followers" src="https://img.shields.io/github/followers/SanzzGanzs?style=flat-square"></a>
