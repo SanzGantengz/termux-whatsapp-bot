@@ -1,8 +1,5 @@
 ### Moshi Moshi~ I'm Nazwa<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="27px">
 <p align="center">
-<a href="https://github.com/NazwaS"><img src="https://raw.githubusercontent.com/NazwaS/NazwaS/main/img/Nazwa.jpg"></a>
-</p>
-<br>
 
 
 
@@ -256,5 +253,5 @@ Get File on [Uwuw Uwuw'an :v](https://www.mediafire.com/download/etk3xp7q1zt4g9r
 ---
 
 ## jika kurang paham silahkan chat gw
+<a href="https://wa.me/6282135250846"><img alt="WhatsApp" src="https://img.shields.io/badge/Contact%20Me-25D366?style=for-the-badge&logo=whatsapp&logoColor=blue"/></a>
 
-<img src="https://raw.githubusercontent.com/NazwaS/NazwaS/main/img/tenor.gif">
