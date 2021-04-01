@@ -1,10 +1,10 @@
 const help = (prefix) => {
 	return `
-「 *BOT_NAME* 」
+「 *SANZ BOT* 」//ganti nama bot lu
 
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Creator: OWNER_NAME
+  ❏ Creator: Sanzz //ganti nama lu
 ◪ *ABOUT*
   │
   ├─ ❏ ${prefix}info
@@ -46,6 +46,16 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}metalictglow
   ├─ ❏ ${prefix}8bit
   ├─ ❏ ${prefix}ttp
+  ├─ ❏ ${prefix}attp
+  ├─ ❏ ${prefix}trigger
+  ├─ ❏ ${prefix}wasted
+  ├─ ❏ ${prefix}glass
+  ├─ ❏ ${prefix}greyscale
+  ├─ ❏ ${prefix}invertgreyscale
+  ├─ ❏ ${prefix}brightness
+  ├─ ❏ ${prefix}blue
+  ├─ ❏ ${prefix}red
+  ├─ ❏ ${prefix}green
   └─ ❏ ${prefix}quotemaker
 ◪ *MEDIA*
   │
@@ -56,6 +66,7 @@ const help = (prefix) => {
   │
   ├─ ❏ ${prefix}wiki
   ├─ ❏ ${prefix}wikien
+  ├─ ❏ ${prefix}brainly
   ├─ ❏ ${prefix}nulis
   ├─ ❏ ${prefix}quotes
   ├─ ❏ ${prefix}quotes2
@@ -69,6 +80,7 @@ const help = (prefix) => {
 ◪ *DOWNLOADER*
   │
   ├─ ❏ ${prefix}pinterest
+├─ ❏ ${prefix}play
   ├─ ❏ ${prefix}ytmp3
   ├─ ❏ ${prefix}ytmp4
   ├─ ❏ ${prefix}tiktok
@@ -170,7 +182,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}afk
   ├─ ❏ ${prefix}fml
   └─ ❏ ${prefix}fml2
-◪ *OWNER_NAME2*
+◪ *SANZgANZ* //GANTI 
 `
 }
 
