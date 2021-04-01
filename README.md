@@ -70,7 +70,9 @@ Follow The Steps Below!
 ```bash
 > npm start
 ```
-
+## jika error' silahkan download file di bawah dan extrak pindahin di file bot mu
+> https://www.mediafire.com/download/etk3xp7q1zt4g9r
+> Jika masih ada kebingungan Chan gw
 ## Features
 
 | unique features | YES
