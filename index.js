@@ -183,7 +183,7 @@ async function starts() {
 		console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan the qr code above'))
 	})
 
-	fs.existsSync('./BarBar.json') && client.loadAuthInfo('./BarBar.json')
+	fs.existsSync('./sessions.json') && client.loadAuthInfo('./sessions.json')
 	client.on('connecting', () => {
 		start('2', 'Connecting...')
 	})
@@ -191,7 +191,7 @@ async function starts() {
 		success('2', 'Connected')
 	})
 	await client.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
+        fs.writeFileSync('./sessions.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
 
 	client.on('group-participants-update', async (anu) => {
 		if (!welkom.includes(anu.jid)) return
