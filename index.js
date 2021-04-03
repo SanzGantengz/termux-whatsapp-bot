@@ -1,7 +1,7 @@
 /*
 * SABAR WOY LAGI GW FIX
 * Tambahin nama author lah
-* Author nya Radya, Farid, and Nazwa
+* Author nya  Nazwa, and Sanzz
 * Tambahin ya zhayank
 * Jan numpang nama doank
 * Baca readme nya biar gk tanya tanya
@@ -62,17 +62,17 @@ const { educationmenu } = require('./database/menu/educationmenu')
 const { downloadermenu } = require('./database/menu/downloadermenu')
 const { mememenu } = require('./database/menu/mememenu')
 const { kerangmenu } = require('./database/menu/kerangmenu')
-const { groupmenu } = require('./database/menu/groupmenu')
+require('./database/menu/groupmenu')
 const { soundmenu } = require('./database/menu/soundmenu')
-const { musicmenu } = require('./database/menu/musicmenu')
-const { islammenu } = require('./database/menu/islammenu')
-const { stalkmenu } = require('./database/menu/stalkmenu')
-const { wibumenu } = require('./database/menu/wibumenu')
-const { funmenu } = require('./database/menu/funmenu')
-const { informationmenu } = require('./database/menu/informationmenu')
-const { 18+menu } require('./database/menu/18+menu')
-const { ownermenu } require('./database/menu/ownermenu')
-const { othermenu } require('./database/menu/othermenu')*/
+
+
+
+
+
+
+
+
+
 /******END OF MENU INPUT******/
 
 /******LOAD OF VCARD INPUT******/
