@@ -1,0 +1,9 @@
+const goblogmenu = (prefix) => {
+	return `  ╓───「 *18+MENU* 」
+  ├ ${prefix}randomhentai
+  ├ ${prefix}nsfwtrap
+  ├${prefix}nsfwneko
+  ╙───々`
+}
+
+exports.goblogmenu = goblogmenu

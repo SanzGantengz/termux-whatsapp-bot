@@ -1,0 +1,5 @@
+const downloadermenu = (prefix) => {
+	return `「 *DOWNLOADERMENU* 」`
+	}
+
+exports.downloadermenu = downloadermenu

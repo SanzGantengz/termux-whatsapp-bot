@@ -1,0 +1,12 @@
+const educationmenu = (prefix) => {
+	return `  ╓───「 *EDUCATIONMENU* 」
+  ├ ${prefix}wiki
+  ├ ${prefix}wikien
+  ├ ${prefix}brainly
+  ├ ${prefix}nulis
+  ├ ${prefix}quotes
+  ├ ${prefix}quotes2
+  ├ ${prefix}artinama
+  ╙───々`
+}
+exports.educationmenu = educationmenu

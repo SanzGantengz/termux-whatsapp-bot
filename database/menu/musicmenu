@@ -1,0 +1,11 @@
+const musicmenu = (prefix) => {
+	return `  ╓───「 *MUSICMENU* 」
+  ├ ${prefix}pinterest
+  ├ ${prefix}play
+  ├ ${prefix}ytmp3
+  ├ ${prefix}ytmp4
+  ├ ${prefix}tiktok
+  ├${prefix}joox
+  ╙───々`
+}
+exports.musicmenu = musicmenu

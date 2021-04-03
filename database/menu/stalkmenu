@@ -1,0 +1,10 @@
+const stalkmenu = (prefix) => {
+	return `╓───「 *STALKMENU* 」
+  ├ ${prefix}tiktokstalk
+  ├ ${prefix}youtubestalk
+  ├ ${prefix}igstalk
+  ├ ${prefix}githubstalk
+  ╙───々
+`
+}
+exports.stalkmenu = stalkmenu

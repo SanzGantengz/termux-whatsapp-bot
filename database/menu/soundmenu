@@ -1,0 +1,13 @@
+const soundmenu = (prefix) => {
+	return `╓───「 *SOUNDMENU* 」
+  ├ ${prefix}play
+  ├${prefix}tts
+  ├ ${prefix}bass
+  ├${prefix}gemuk
+  ├ ${prefix}tupai
+  ├${prefix}slow
+  ├${prefix}fast
+  ╙───々
+`
+}
+exports.soundmenu = soundmenu

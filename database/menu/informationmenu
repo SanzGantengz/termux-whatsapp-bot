@@ -1,0 +1,13 @@
+const informationmenu = (prefix) => {
+	return `  ╓───「 *INFORMATIONMENU* 」
+  ├ ${prefix}bahasa
+  ├ ${prefix}kodenegara
+  ├ ${prefix}kbbi
+  ├ ${prefix}fakta
+  ├ ${prefix}infocuaca
+  ├ ${prefix}infogempa
+  ├ ${prefix}jadwaltvnow
+  ├ ${prefix}covid
+  ╙───々`
+}
+exports.informationmenu = informationmenu

@@ -1,0 +1,7 @@
+const mememenu = (prefix) => {
+	return `  ╓───「 *MEMEMENU* 」
+  ├ ${prefix}meme
+  ├ ${prefix}memeindo
+  ╙───々`
+}
+exports.mememenu = mememenu

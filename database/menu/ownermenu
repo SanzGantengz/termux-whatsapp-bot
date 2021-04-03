@@ -1,0 +1,11 @@
+const ownermenu = (prefix) => {
+	return `  ╓───「 *OWNERMENU* 」
+  ├ ${prefix}setprefix
+  ├ ${prefix}block
+  ├ ${prefix}bc
+  ├ ${prefix}bcgc
+  ├ ${prefix}clone
+  ├${prefix}clearall
+  ╙───々`
+}
+exports.ownermenu = ownermenu

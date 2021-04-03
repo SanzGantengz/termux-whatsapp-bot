@@ -1,0 +1,9 @@
+
+const mediamenu = (prefix) => {
+	return `  ╓───「 *MEDIAMENU* 」
+  ├ ${prefix}trendtwit
+  ├ ${prefix}randomkpop
+  ├${prefix}ytsearch
+  ╙───々`
+}
+exports.mediamenu = mediamenu

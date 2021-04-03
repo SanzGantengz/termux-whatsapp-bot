@@ -1,0 +1,6 @@
+const islammenu = (prefix) => {
+	return `  ╓───「 *ISLAMMENU* 」
+  ├ ${prefix}quran
+  ╙───々`
+}
+exports.islammenu = islammenu

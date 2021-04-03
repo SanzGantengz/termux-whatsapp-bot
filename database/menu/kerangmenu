@@ -1,0 +1,9 @@
+const kerangmenu = (prefix) => {
+	return `  ╓───「 *KERANGMENU* 」
+  ├ ${prefix}apakah
+  ├ ${prefix}kapankah
+  ├ ${prefix}rate
+  ├${prefix}bisakah
+  ╙───々`
+}
+exports.kerangmenu = kerangmenu

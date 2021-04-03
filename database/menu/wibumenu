@@ -1,0 +1,15 @@
+const wibumenu = (prefix) => {
+	return `╓───「 *WIBUMENU* 」
+  ├ ${prefix}neonime
+  ├ ${prefix}pokemon
+  ├ ${prefix}loli
+  ├ ${prefix}waifu
+  ├ ${prefix}randomanime
+  ├ ${prefix}husbu
+  ├ ${prefix}husbu2
+  ├ ${prefix}wait
+  ├ ${prefix}nekonime
+  ╙───々
+`
+}
+exports.wibumenu = wibumenu

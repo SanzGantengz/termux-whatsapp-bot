@@ -1,0 +1,9 @@
+const spammermenu = (prefix) => {
+	return `╓───「 *SPAMMERMENU* 」
+	├ ${prefix}spamcall
+	├ ${prefix}spamsms
+    ├ ${prefix}spamgmail
+    ╙───々
+`
+}
+exports.spammermenu = spammermenu
