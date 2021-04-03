@@ -56,9 +56,7 @@ const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
 const _level = JSON.parse(fs.readFileSync('./database/json/level.json'))
-const bad = JSON.parse(fs.readFileSync('./database/json/bad.json'))
-const badword = JSON.parse(fs.readFileSync('./database/json/badword.json'))
-const antilink = JSON.parse(fs.readFileSync('./database/json/antilink.json'))
+
 /******END OF JSON INPUT******/
 
 /******BEGIN OF MENU INPUT******/
